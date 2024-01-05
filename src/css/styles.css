@@ -53,7 +53,7 @@ p {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 92%; /* 35.2px */
+  line-height: 110%; /* 35.2px */
   text-transform: uppercase;
 
   margin-bottom: 270px;
@@ -111,6 +111,8 @@ p {
   cursor: pointer;
 
   margin-bottom: 100px;
+
+  animation: glowing-two 1.3s infinite;
 }
 
 .header-button::before {
@@ -459,6 +461,8 @@ p {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  animation: glowing-two 1.3s infinite;
 }
 
 .vebinar-list .list-item:first-child .vebinar-container::before {
@@ -718,4 +722,21 @@ p {
 
 .creator-container p:last-child {
   text-decoration: underline;
+}
+
+@keyframes glowing-two {
+  0% {
+    background-color: #5494de;
+    box-shadow: 0 0 5px #5494de;
+  }
+
+  50% {
+    background-color: #3e67d0;
+    box-shadow: 0 0 20px #3e67d0;
+  }
+
+  to {
+    background-color: #5494de;
+    box-shadow: 0 0 5px #5494de;
+  }
 }
