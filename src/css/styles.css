@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 360px;
+}
+
+/* timer */
+
+.timer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timer__items {
+  display: flex;
+  justify-content: center;
+}
+.timer__item {
+  color: #000;
+  text-align: center;
+  font-family: Futura PT;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+.timer__item:first-child {
+  margin-left: 0;
+}
+
+.timer__item:last-child {
+  margin-right: 0;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+}
+.timer__item:not(:last-child)::after {
+  content: "";
+
+  width: 1px;
+  height: 25px;
+  background: #000;
+
+  position: absolute;
+  top: 4px;
+  right: -11px;
+}
