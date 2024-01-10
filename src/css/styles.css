@@ -424,6 +424,10 @@ p {
   bottom: 56px;
   right: 10px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: #101010;
   font-family: Unbounded;
   font-size: 24px;
